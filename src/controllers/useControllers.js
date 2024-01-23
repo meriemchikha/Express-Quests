@@ -46,9 +46,16 @@ const postUser = (req, res) => {
       res.sendStatus(500);
     });
 };
+const putUser= ('/api/users/:id',(req, res) => {
+   const id = req.params.id;
+   const user = req.body;
+   console.log(`Updation user with id ${id} with data:`, user);
+   res.status(200).send(`User with id ${id} updated successfully`);
 
+});
 module.exports = {
   getUsers,
   getUserById,
   postUser,
+  putUser,
 };
