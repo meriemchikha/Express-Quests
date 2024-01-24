@@ -14,5 +14,7 @@ app.get("/api/users/:id", userControllers.getUserById);
 
 app.post("/api/movies", movieControllers.postMovie);
 app.post("/api/users", userControllers.postUser);
+app.delete("/api/movies/:id", movieControllers.deleteMovie);
+app.delete("/api/users/:id", userControllers.deleteUser);
 
 module.exports = app;
